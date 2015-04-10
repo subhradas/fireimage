@@ -11,7 +11,7 @@ imageApp.run(function($ionicPlatform) {
     }
   });
 })
-var fb = new firebase("https://sdimageupload.firebaseio.com/")
+var fb = new firebase("https://myid.firebaseio.com/")
 
 imageApp.config(function($stateProvider, $urlRouterProvider) {
     $stateProvider
