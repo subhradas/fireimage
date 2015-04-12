@@ -1,4 +1,4 @@
-var imageApp = angular.module("starter", ["ionic", "ngCordova", "firebase"])
+var imageApp = angular.module("starter", ["ionic", "ngCordova", "firebase"]);
 
 
 imageApp.run(function($ionicPlatform) {
@@ -11,7 +11,7 @@ imageApp.run(function($ionicPlatform) {
     }
   });
 })
-var fb = new firebase("https://myid.firebaseio.com/")
+var fb = new Firebase("https://<myID>.firebaseio.com/");
 
 imageApp.config(function($stateProvider, $urlRouterProvider) {
     $stateProvider
@@ -53,8 +53,8 @@ imageApp.controller("SecureController", function($scope, $ionicHistory, $firebas
             allowEdit : true,
             encodingType: Camera.EncodingType.JPEG,
             popoverOptions: CameraPopoverOptions,
-            targetWidth: 200,
-            targetHeight: 200,
+            targetWidth: 500,
+            targetHeight: 500,
             saveToPhotoAlbum: false
         };
         $cordovaCamera.getPicture(options).then(function(imageData) {
